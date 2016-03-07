@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ezentis.ezentistrackingapp.WorkActivity"
+    tools:showIn="@layout/app_bar_work">
+
+    <RelativeLayout
+        android:id="@+id/actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/start_work"
+            style="@style/text_link"
+            android:layout_toLeftOf="@+id/start_break"
+            android:text="Start work" />
+
+        <TextView
+            android:id="@+id/start_break"
+            style="@style/text_link"
+            android:layout_toLeftOf="@+id/finish_work"
+            android:text="Start break" />
+
+        <TextView
+            android:id="@+id/finish_break"
+            style="@style/text_link"
+            android:layout_toLeftOf="@+id/finish_work"
+            android:text="Finish break" />
+
+        <TextView
+            android:id="@+id/finish_work"
+            style="@style/text_link"
+            android:layout_alignParentRight="true"
+            android:text="Finish work" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/previous_work"
+        style="@style/text_link"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/actions"
+        android:background="@color/material_primary"
+        android:text="Previous work"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white" />
+
+    <com.liferay.mobile.screens.ddl.list.DDLListScreenlet
+        android:id="@+id/ddllist_screenlet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/previous_work"
+        app:autoLoad="false"
+        app:labelFields="@string/liferay_recordset_fields"
+        app:layoutId="@layout/ddl_list_ezentis"
+        app:offlinePolicy="REMOTE_FIRST"
+        app:recordSetId="@string/liferay_recordset_id" />
+
+</RelativeLayout>

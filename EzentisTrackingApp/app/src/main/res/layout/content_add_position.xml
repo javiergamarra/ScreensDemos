@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ezentis.ezentistrackingapp.AddPositionActivity"
+    tools:showIn="@layout/activity_add_position">
+
+    <TextView
+        android:id="@+id/label_position"
+        style="@style/text_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.liferay.mobile.screens.ddl.form.DDLFormScreenlet
+        android:id="@+id/ddlform_screenlet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/label_position"
+        app:filePrefix="ezentis_"
+        app:layoutId="@layout/ddl_form_ezentis"
+        app:offlinePolicy="REMOTE_FIRST"
+        app:recordSetId="@string/liferay_recordset_id"
+        app:repositoryId="105117"
+        app:structureId="@string/liferay_structure_id" />
+
+</RelativeLayout>
