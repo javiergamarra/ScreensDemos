@@ -6,7 +6,7 @@ This example Android app uses [Liferay Screens](https://github.com/liferay/lifer
 
 ## Tutorial
 
-Checkout this [video](https://www.youtube.com/watch?v=kWcblfLRaQI) to see how to create the application from scratch.
+Checkout this [video](https://www.youtube.com/watch?v=4LjutX0dcRw) to see how to create the application from scratch.
 
 ## Screenshots
 
