@@ -15,3 +15,5 @@ Liferay Screens Demo Projects
 * **PushChatBubble**: example chat app with **push messages** and bubbles to render them
 
 	<img src="PushChatBubble/images/PushBubble.png" width="200px" />
+	
+	This example Android app uses [Liferay Screens](https://github.com/liferay/liferay-screens/), the [Push Notification plugin for Android](https://github.com/brunofarache/liferay-push-android) and a [portlet](https://github.com/liferay/liferay-plugins/tree/master/portlets/push-notifications-portlet) to receive push notifications. Checkout this [video](https://www.youtube.com/watch?v=4LjutX0dcRw) to see how to create the application from scratch.
