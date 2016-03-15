@@ -5,7 +5,7 @@
         <menu>
             <item
                 android:id="@+id/logout"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@android:drawable/ic_menu_send"
                 android:title="Logout" />
         </menu>
     </item>

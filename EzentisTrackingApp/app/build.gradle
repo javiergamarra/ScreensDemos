@@ -31,6 +31,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.android.support:design:23.2.0'
 
-    compile 'com.liferay.mobile:liferay-screens:1.4.0.beta2'
-    compile 'com.liferay.mobile:liferay-material-viewset:1.4.0.beta2'
+    compile 'com.liferay.mobile:liferay-screens:1.4.0.beta8'
+    compile 'com.liferay.mobile:liferay-material-viewset:1.4.0.beta8'
 }
