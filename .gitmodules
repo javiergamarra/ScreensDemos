@@ -1,3 +1,6 @@
 [submodule "liferay-events"]
 	path = liferay-events
 	url = https://github.com/nhpatt/liferay-events
+[submodule "MagazinePOC"]
+	path = MagazinePOC
+	url = https://github.com/nhpatt/MagazinePOC
