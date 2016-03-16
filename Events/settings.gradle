@@ -1,9 +1,0 @@
-include ':app'
-
-//include 'liferay-screens'
-//project(':liferay-screens').projectDir = new File(settingsDir, '../../../screens/android/library/core')
-//project(':liferay-screens').name = 'liferay-screens'
-//
-//include 'liferay-material-viewset'
-//project(':liferay-material-viewset').projectDir = new File(settingsDir, '../../../screens/android/viewsets/material')
-//project(':liferay-material-viewset').name = 'liferay-material-viewset'
