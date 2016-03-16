@@ -5,9 +5,9 @@ Liferay Screens Demo Projects
 
 	Example application for the Liferay Developer Conference 2015, showing a calendar view (agenda), list of sponsors, allows to add talks, login, user portrait and a list of blogs
 	
-	<img src="liferay-events/images/list.png" width="200px"/>
-	<img src="liferay-events/images/menu.png" width="200px"/>
-	<img src="liferay-events/images/webview.png" width="200px"/>
+	<img src="https://raw.githubusercontent.com/nhpatt/liferay-events/master/images/list.png" width="200px"/>
+	<img src="https://raw.githubusercontent.com/nhpatt/liferay-events/master/images/menu.png" width="200px"/>
+	<img src="https://raw.githubusercontent.com/nhpatt/liferay-events/master/images/webview.png" width="200px"/>
 
 * **EzentisTrackingApp**
 
