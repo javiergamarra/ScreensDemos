@@ -27,3 +27,7 @@ Liferay Screens Demo Projects
 	<img src="https://raw.githubusercontent.com/nhpatt/liferay-events/master/images/webview.png" width="200px"/>
 	
 * **PushWithDDLHook**: a Liferay 6.2 hook illustrating how to send a push notification when a new DDL record is added.
+
+* **WorkshopExampleApp**: an example application developed in 20 minutes illustrating how to integrate push notifications, ddl forms, cache and login.
+
+<img src="WorkshopExampleApp/images/WorkshopExample.png" width="200px"/>
