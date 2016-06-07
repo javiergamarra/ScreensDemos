@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="liferay_server">https://portal-uat1.smiles.com.br</string>
+	<string name="liferay_company_id">10255</string>
+	<string name="liferay_group_id">10282</string>
+
+	<string name="portletItemName">promo</string>
+	<string name="offer_image">Offer image</string>
+	<string name="know_more">Saiba mais</string>
+
+	<string name="imagen">imagem_home_promocoes</string>
+	<string name="titulo">titulo_home_promocoes</string>
+	<string name="subtitulo">subtitulo_home_promocao</string>
+</resources>

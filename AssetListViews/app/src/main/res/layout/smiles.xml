@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/smiles_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/offer_image"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/smiles_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/smiles_image_view"
+        android:textAllCaps="true"
+        android:textColor="#F47922"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/smiles_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/smiles_title"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/smiles_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F47922"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/white_add"
+        android:elevation="8dp"
+        android:gravity="center_vertical|right"
+        android:padding="5dp"
+        android:text="@string/know_more"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>
