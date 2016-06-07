@@ -31,3 +31,9 @@ Liferay Screens Demo Projects
 * **WorkshopExampleApp**: an example application developed in 20 minutes illustrating how to integrate push notifications, ddl forms, cache and login.
 
 <img src="WorkshopExampleApp/images/WorkshopExample.png" width="200px"/>
+
+* **AssetListViews**: an example app with several custom views, a list with a custom adapter, a grid and a slideshow.
+
+<img src="AssetListViews/images/slideshow.gif" width="250px"/>
+<img src="AssetListViews/images/list.png" width="200px"/>
+<img src="AssetListViews/images/grid.png" width="200px"/>
