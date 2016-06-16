@@ -25,10 +25,10 @@ public class LoginActivity extends AppCompatActivity implements LoginListener {
         loginScreenlet.setListener(this);
 
         EditText login = (EditText) findViewById(R.id.liferay_login);
-        login.setText("test@liferay.com");
+        login.setText(R.string.liferay_anonymousApiUserName);
 
         EditText password = (EditText) findViewById(R.id.liferay_password);
-        password.setText("test");
+        password.setText(R.string.liferay_anonymousApiPassword);
     }
 
     @Override

@@ -6,8 +6,8 @@
     <integer name="liferay_group_id">37585</integer>
 
     <!-- SignupScreenlet values -->
-    <string name="liferay_anonymousApiUserName">test@liferay.com</string>
-    <string name="liferay_anonymousApiPassword">test</string>
+    <string name="liferay_anonymousApiUserName">push1@liferay.com</string>
+    <string name="liferay_anonymousApiPassword">push1</string>
 
     <!-- DDLFormScreenlet values -->
     <string name="liferay_recordset_id">105972</string>
