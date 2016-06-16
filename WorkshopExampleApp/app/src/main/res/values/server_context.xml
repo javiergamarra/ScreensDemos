@@ -6,7 +6,13 @@
     <string name="liferay_group_id">20195</string>
     <!--<integer name="liferay_portal_version">70</integer>-->
 
+    <string name="default_user">push1@liferay.com</string>
+    <string name="default_password">push1</string>
+
     <string name="record_set_id">21862</string>
     <string name="structure_id">21860</string>
+    <integer name="journal_id">21619</integer>
+
+    <string name="push_token">868241662267</string>
 
 </resources>

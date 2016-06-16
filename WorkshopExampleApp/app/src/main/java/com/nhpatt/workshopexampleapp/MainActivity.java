@@ -10,30 +10,30 @@ import com.liferay.mobile.screens.auth.login.LoginScreenlet;
 import com.liferay.mobile.screens.context.User;
 
 public class MainActivity extends AppCompatActivity
-		implements LoginListener {
+        implements LoginListener {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-		LoginScreenlet loginScreenlet = (LoginScreenlet) findViewById(R.id.login);
-		loginScreenlet.setListener(this);
+        LoginScreenlet loginScreenlet = (LoginScreenlet) findViewById(R.id.login);
+        loginScreenlet.setListener(this);
 
-		EditText login = (EditText) findViewById(R.id.liferay_login);
-		login.setText("test@liferay.com");
+        EditText login = (EditText) findViewById(R.id.liferay_login);
+        login.setText(R.string.default_user);
 
-		EditText password = (EditText) findViewById(R.id.liferay_password);
-		password.setText("test");
-	}
+        EditText password = (EditText) findViewById(R.id.liferay_password);
+        password.setText(R.string.default_password);
+    }
 
-	@Override
-	public void onLoginSuccess(User user) {
-		startActivity(new Intent(this, DDLActivity.class));
-	}
+    @Override
+    public void onLoginSuccess(User user) {
+        startActivity(new Intent(this, DDLActivity.class));
+    }
 
-	@Override
-	public void onLoginFailure(Exception e) {
+    @Override
+    public void onLoginFailure(Exception e) {
 
-	}
+    }
 }

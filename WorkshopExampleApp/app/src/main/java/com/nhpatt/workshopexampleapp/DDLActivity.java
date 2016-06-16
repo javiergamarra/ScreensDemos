@@ -5,7 +5,7 @@ import android.support.design.widget.Snackbar;
 import android.view.View;
 
 import com.liferay.mobile.android.service.Session;
-import com.liferay.mobile.android.v7.journalarticle.JournalArticleService;
+import com.liferay.mobile.android.v62.journalarticle.JournalArticleService;
 import com.liferay.mobile.screens.context.SessionContext;
 import com.liferay.mobile.screens.ddl.form.DDLFormListener;
 import com.liferay.mobile.screens.ddl.form.DDLFormScreenlet;
@@ -33,7 +33,7 @@ public class DDLActivity extends PushScreensActivity implements DDLFormListener 
 				Session session = SessionContext.createSessionFromCurrentSession();
 				JournalArticleService journalArticleService = new JournalArticleService(session);
 				try {
-					JSONObject jsonObject = journalArticleService.getArticle(30965);
+					JSONObject jsonObject = journalArticleService.getArticle(getResources().getInteger(R.integer.journal_id));
 					LiferayLogger.e(jsonObject.toString());
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -60,7 +60,7 @@ public class DDLActivity extends PushScreensActivity implements DDLFormListener 
 
 	@Override
 	protected String getSenderId() {
-		return "868241662267";
+		return getString(R.string.push_token);
 	}
 
 	@Override
