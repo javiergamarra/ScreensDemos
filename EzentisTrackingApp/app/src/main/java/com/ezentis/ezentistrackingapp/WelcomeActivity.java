@@ -18,14 +18,7 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-
-        Intent intent;
-        if (v.getId() == R.id.register) {
-            intent = new Intent(this, RegisterActivity.class);
-        } else {
-            intent = new Intent(this, LoginActivity.class);
-        }
-
+        Intent intent = new Intent(this, v.getId() == R.id.register ? RegisterActivity.class : LoginActivity.class);
         startActivity(intent);
     }
 }
