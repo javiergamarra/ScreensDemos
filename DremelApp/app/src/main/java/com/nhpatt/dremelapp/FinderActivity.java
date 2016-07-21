@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.liferay.mobile.android.callback.typed.GenericCallback;
+import com.liferay.mobile.android.service.Session;
 import com.liferay.mobile.android.v62.dlapp.DLAppService;
 import com.liferay.mobile.screens.assetlist.AssetEntry;
 import com.liferay.mobile.screens.assetlist.AssetListScreenlet;
@@ -46,7 +48,6 @@ public class FinderActivity extends AppCompatActivity implements BaseListListene
         super.onResume();
 
         if (!stack.isEmpty()) {
-            oldAssetEntry = stack.pop();
             searchForAssets(oldAssetEntry);
         } else {
             final AssetEntry assetEntry = getIntent().getParcelableExtra("ASSET");
@@ -84,16 +85,11 @@ public class FinderActivity extends AppCompatActivity implements BaseListListene
             }
 
             if (assets.isEmpty()) {
-                JSONArray jsonArray = dlAppService.getFileEntries(groupId, classPK);
+                JSONArray files = dlAppService.getFileEntries(groupId, classPK);
 
-                if (jsonArray.length() > 0) {
-
-                    FileEntryService fileEntryService = new FileEntryService(SessionContext.createSessionFromCurrentSession());
-                    JSONObject jsonObject = fileEntryService.getFileEntry(jsonArray.getJSONObject(0).getLong("fileEntryId"));
-
-                    Intent intent = new Intent(this, AccessoriesActivity.class);
-                    intent.putExtra("fileEntry", jsonObject.toString());
-                    startActivity(intent);
+                for (int i = 0; i < files.length(); i++) {
+                    JSONObject jsonObject = files.getJSONObject(i);
+                    assets.add(AssetFactory.createInstance(JSONUtil.toMap(jsonObject)));
                 }
             }
 
@@ -124,9 +120,38 @@ public class FinderActivity extends AppCompatActivity implements BaseListListene
 
     @Override
     public void onListItemSelected(AssetEntry assetEntry, View view) {
-        stack.push(oldAssetEntry);
-        this.oldAssetEntry = assetEntry;
-        searchForAssets(assetEntry);
+
+        if (assetEntry.getValues().containsKey("extension")) {
+            try {
+                Session session = SessionContext.createSessionFromCurrentSession();
+                session.setCallback(new GenericCallback<JSONObject>() {
+                    @Override
+                    public void onFailure(Exception exception) {
+
+                    }
+
+                    @Override
+                    public void onSuccess(JSONObject result) {
+                        Intent intent = new Intent(FinderActivity.this, AccessoriesActivity.class);
+                        intent.putExtra("fileEntry", String.valueOf(result));
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public JSONObject transform(Object obj) throws Exception {
+                        return (JSONObject) obj;
+                    }
+                });
+                FileEntryService fileEntryService = new FileEntryService(session);
+                fileEntryService.getFileEntry(Long.valueOf((Integer) assetEntry.getValues().get("fileEntryId")));
+            } catch (Exception e) {
+                LiferayLogger.e("Error", e);
+            }
+        } else {
+            stack.push(oldAssetEntry);
+            this.oldAssetEntry = assetEntry;
+            searchForAssets(assetEntry);
+        }
     }
 
     @Override
