@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tool &amp; Accessory Finder</string>
+    <string name="title_activity_tools">Select a tool</string>
+    <string name="title_activity_tasks">Select a task</string>
+    <string name="title_activity_materials">Select a material</string>
+    <string name="title_activity_accesories">Accessories</string>
+</resources>
