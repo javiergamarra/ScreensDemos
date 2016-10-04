@@ -1,0 +1,10 @@
+<resources>
+	<string name="app_name">My Application</string>
+	<string name="title_activity_journal_activty">JournalActivty</string>
+
+
+	<declare-styleable name="CommentScreenlet">
+		<attr format="integer" name="id"/>
+		<attr name="layoutId"/>
+	</declare-styleable>
+</resources>
