@@ -12,6 +12,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.liferay.mobile.screens.ddl.model.Record;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -30,7 +31,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
         Record record = getIntent().getParcelableExtra("record");
-        HashMap<String, Object> modelValues = record.getModelValues();
+
+        Map<String, Object> modelValues = record.getModelValues();
         latitude = Double.valueOf((String) modelValues.get("Latitude"));
         longitude = Double.valueOf((String) modelValues.get("Longitude"));
         activity = (String) modelValues.get("Activity");

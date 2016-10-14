@@ -50,10 +50,17 @@ public class DDLListView
 	}
 
 	@Override
-	public void showFinishOperation(int page, List<Record> entries, int rowCount) {
-		sortRecords(entries);
+	public void showFinishOperation(int startRow, int endRow, Exception e) {
 
-		super.showFinishOperation(page, entries, rowCount);
+
+		super.showFinishOperation(startRow, endRow, e);
+	}
+
+	@Override
+	public void showFinishOperation(int startRow, int endRow, List<Record> serverEntries, int totalRowCount) {
+		sortRecords(serverEntries);
+
+		super.showFinishOperation(startRow, endRow, serverEntries, totalRowCount);
 	}
 
 	@Override

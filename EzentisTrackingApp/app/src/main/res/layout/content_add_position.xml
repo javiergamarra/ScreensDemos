@@ -21,7 +21,7 @@
         android:layout_below="@+id/label_position"
         app:filePrefix="ezentis_"
         app:layoutId="@layout/ddl_form_ezentis"
-        app:offlinePolicy="REMOTE_FIRST"
+        app:cachePolicy="REMOTE_FIRST"
         app:recordSetId="@string/liferay_recordset_id"
         app:repositoryId="105117"
         app:structureId="@string/liferay_structure_id" />

@@ -55,7 +55,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/previous_work"
         app:labelFields="@string/liferay_recordset_fields"
-        app:offlinePolicy="REMOTE_FIRST"
+        app:cachePolicy="REMOTE_FIRST"
         app:pageSize="100"
         app:recordSetId="@string/liferay_recordset_id" />
 

@@ -41,8 +41,8 @@ public class DDLFormView
 
     @Override
     public void showRecordValues() {
-        for (int i = 0; i < _fieldsContainerView.getChildCount(); i++) {
-            DDLFieldViewModel viewModel = (DDLFieldViewModel) _fieldsContainerView.getChildAt(i);
+        for (int i = 0; i < fieldsContainerView.getChildCount(); i++) {
+            DDLFieldViewModel viewModel = (DDLFieldViewModel) fieldsContainerView.getChildAt(i);
             viewModel.refresh();
 
             if (viewModel.getField().isReadOnly()) {

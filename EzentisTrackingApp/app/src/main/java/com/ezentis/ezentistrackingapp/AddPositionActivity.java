@@ -29,6 +29,7 @@ import com.liferay.mobile.screens.ddl.model.DocumentField;
 import com.liferay.mobile.screens.ddl.model.Field;
 import com.liferay.mobile.screens.ddl.model.Record;
 
+import java.util.Map;
 import org.json.JSONObject;
 
 import java.text.DateFormat;
@@ -115,7 +116,7 @@ public class AddPositionActivity extends AppCompatActivity implements DDLFormLis
     }
 
     @Override
-    public void onDDLFormRecordLoaded(Record record) {
+    public void onDDLFormRecordLoaded(Record record, Map<String, Object> valuesAndAttributes) {
 
     }
 
@@ -131,25 +132,10 @@ public class AddPositionActivity extends AppCompatActivity implements DDLFormLis
 
     }
 
-    @Override
-    public void onDDLFormLoadFailed(Exception e) {
+    //public void onDDLFormRecordAddFailed(Exception e) {
+    //    Snackbar.make(view, "Send work failed :(", Snackbar.LENGTH_SHORT).show();
+    //}
 
-    }
-
-    @Override
-    public void onDDLFormRecordLoadFailed(Exception e) {
-
-    }
-
-    @Override
-    public void onDDLFormRecordAddFailed(Exception e) {
-        Snackbar.make(view, "Send work failed :(", Snackbar.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onDDLFormUpdateRecordFailed(Exception e) {
-
-    }
 
     @Override
     public void onDDLFormDocumentUploaded(DocumentField documentField, JSONObject jsonObject) {
@@ -161,20 +147,6 @@ public class AddPositionActivity extends AppCompatActivity implements DDLFormLis
 
     }
 
-    @Override
-    public void loadingFromCache(boolean success) {
-
-    }
-
-    @Override
-    public void retrievingOnline(boolean triedInCache, Exception e) {
-
-    }
-
-    @Override
-    public void storingToCache(Object object) {
-
-    }
 
     @Override
     public void onConnected(Bundle bundle) {
@@ -304,5 +276,10 @@ public class AddPositionActivity extends AppCompatActivity implements DDLFormLis
         if (savedInstanceState.containsKey(LAST_UPDATED_TIME_STRING_KEY)) {
             lastUpdateTime = savedInstanceState.getString(LAST_UPDATED_TIME_STRING_KEY);
         }
+    }
+
+    @Override
+    public void error(Exception e, String userAction) {
+
     }
 }

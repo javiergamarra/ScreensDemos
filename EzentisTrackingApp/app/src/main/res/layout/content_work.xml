@@ -58,7 +58,7 @@
         app:autoLoad="false"
         app:labelFields="@string/liferay_recordset_fields"
         app:layoutId="@layout/ddl_list_ezentis"
-        app:offlinePolicy="REMOTE_FIRST"
+        app:cachePolicy="REMOTE_FIRST"
         app:recordSetId="@string/liferay_recordset_id" />
 
 </RelativeLayout>
