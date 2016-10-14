@@ -30,5 +30,12 @@ dependencies {
 
     compile 'com.android.support:appcompat-v7:23.4.0'
 
-    compile 'com.liferay.mobile:liferay-screens:1.4.0'
+    compile 'com.liferay.mobile:liferay-screens:2.0.0-beta.4'
+    compile 'com.liferay.mobile:liferay-material-viewset:2.0.0-beta.4'
+}
+
+repositories {
+    maven {
+        url "http://dl.bintray.com/nhpatt/liferay-mobile"
+    }
 }
