@@ -7,13 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.liferay.mobile.screens.assetlist.AssetEntry;
-import com.liferay.mobile.screens.assetlist.AssetListScreenlet;
+import com.liferay.mobile.screens.asset.AssetEntry;
+import com.liferay.mobile.screens.asset.list.AssetListScreenlet;
 import com.liferay.mobile.screens.base.list.BaseListListener;
-import com.liferay.mobile.screens.base.list.BaseListScreenlet;
 import com.liferay.mobile.screens.webcontent.WebContent;
-
 import java.util.List;
 
 /**
@@ -21,52 +18,44 @@ import java.util.List;
  */
 public class AssetListFragment extends Fragment implements BaseListListener<AssetEntry> {
 
-    public static AssetListFragment newInstance() {
+	public static AssetListFragment newInstance() {
 
-        Bundle args = new Bundle();
+		Bundle args = new Bundle();
 
-        AssetListFragment fragment = new AssetListFragment();
-        fragment.setArguments(args);
-        return fragment;
-    }
+		AssetListFragment fragment = new AssetListFragment();
+		fragment.setArguments(args);
+		return fragment;
+	}
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.asset_list, container, false);
-        AssetListScreenlet assetListScreenlet = (AssetListScreenlet) view.findViewById(R.id.asset_list_screenlet);
-        assetListScreenlet.setListener(this);
-        return view;
-    }
+	@Nullable
+	@Override
+	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+		@Nullable Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.asset_list, container, false);
+		AssetListScreenlet assetListScreenlet = (AssetListScreenlet) view.findViewById(R.id.asset_list_screenlet);
+		assetListScreenlet.setListener(this);
+		return view;
+	}
 
-    @Override
-    public void onListPageFailed(BaseListScreenlet source, int page, Exception e) {
+	@Override
+	public void onListPageFailed(int startRow, Exception e) {
 
-    }
+	}
 
-    @Override
-    public void onListPageReceived(BaseListScreenlet source, int page, List<AssetEntry> entries, int rowCount) {
+	@Override
+	public void onListPageReceived(int startRow, int endRow, List<AssetEntry> entries, int rowCount) {
 
-    }
+	}
 
-    @Override
-    public void onListItemSelected(AssetEntry element, View view) {
-        View content = getActivity().findViewById(android.R.id.content);
-        Snackbar.make(content, ((WebContent) element).getLocalized("titulo_home_promocoes"), Snackbar.LENGTH_SHORT).show();
-    }
+	@Override
+	public void onListItemSelected(AssetEntry element, View view) {
+		View content = getActivity().findViewById(android.R.id.content);
+		Snackbar.make(content, ((WebContent) element).getLocalized("titulo_home_promocoes"), Snackbar.LENGTH_SHORT)
+			.show();
+	}
 
-    @Override
-    public void loadingFromCache(boolean success) {
+	@Override
+	public void error(Exception e, String userAction) {
 
-    }
-
-    @Override
-    public void retrievingOnline(boolean triedInCache, Exception e) {
-
-    }
-
-    @Override
-    public void storingToCache(Object object) {
-
-    }
+	}
 }
