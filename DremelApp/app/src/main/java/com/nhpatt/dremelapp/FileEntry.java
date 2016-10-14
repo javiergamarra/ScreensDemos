@@ -1,6 +1,6 @@
 package com.nhpatt.dremelapp;
 
-import com.liferay.mobile.screens.assetlist.AssetEntry;
+import com.liferay.mobile.screens.asset.AssetEntry;
 import com.liferay.mobile.screens.ddl.model.DDMStructure;
 import com.liferay.mobile.screens.ddl.model.WithDDM;
 
@@ -30,7 +30,7 @@ public class FileEntry extends AssetEntry implements WithDDM {
 
     @Override
     public void parseDDMStructure(JSONObject jsonObject) throws JSONException {
-        List array = (ArrayList) _values.get("DDMStructures");
+        List array = (ArrayList) values.get("DDMStructures");
 
         ddmStructure.parse(new JSONObject((Map) array.get(0)));
     }

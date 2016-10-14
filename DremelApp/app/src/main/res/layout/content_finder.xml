@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <com.liferay.mobile.screens.assetlist.AssetListScreenlet
+    <com.liferay.mobile.screens.asset.list.AssetListScreenlet
         android:id="@+id/tasks"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:autoLoad="false"
-        app:offlinePolicy="CACHE_FIRST"
+        app:cachePolicy="CACHE_FIRST"
         app:labelFields="name"
         app:layoutId="@layout/tools_list_default" />
 

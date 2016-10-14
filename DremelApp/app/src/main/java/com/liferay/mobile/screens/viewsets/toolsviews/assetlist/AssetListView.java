@@ -8,8 +8,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.liferay.mobile.screens.assetlist.AssetEntry;
-import com.liferay.mobile.screens.assetlist.view.AssetListViewModel;
+import com.liferay.mobile.screens.asset.AssetEntry;
+import com.liferay.mobile.screens.asset.list.view.AssetListViewModel;
 import com.liferay.mobile.screens.base.list.BaseListAdapter;
 import com.liferay.mobile.screens.base.list.BaseListAdapterListener;
 import com.liferay.mobile.screens.base.list.BaseListScreenletView;

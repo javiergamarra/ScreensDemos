@@ -26,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#ccc"
-        android:drawableLeft="@drawable/material_tinted_add"
-        android:padding="15dp"
+        android:drawableLeft="@drawable/information_hdpi"
+        android:padding="10dp"
         android:text="Information"
         android:textColor="@color/colorPrimary" />
 

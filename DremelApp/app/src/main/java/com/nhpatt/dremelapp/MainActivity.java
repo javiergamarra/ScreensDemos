@@ -31,12 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 		try {
 			LiferayScreensContext.init(this);
-			LoginBasicInteractor loginBasicInteractor = new LoginBasicInteractor(0);
+			LoginBasicInteractor loginBasicInteractor = new LoginBasicInteractor();
 			loginBasicInteractor.onScreenletAttached(this);
-			loginBasicInteractor.setLogin("bruno.admin");
-			loginBasicInteractor.setPassword("brunoadmin");
-			loginBasicInteractor.setBasicAuthMethod(BasicAuthMethod.SCREEN_NAME);
-			loginBasicInteractor.login();
+			loginBasicInteractor.start("bruno.admin", "brunoadmin", BasicAuthMethod.SCREEN_NAME);
 		}
 		catch (Exception e) {
 			LiferayLogger.e(e.getMessage(), e);

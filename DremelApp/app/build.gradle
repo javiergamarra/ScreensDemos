@@ -1,41 +1,44 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
-    defaultConfig {
-        applicationId "com.nhpatt.dremelapp"
-        minSdkVersion 15
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  compileSdkVersion 23
+  buildToolsVersion "23.0.3"
+  defaultConfig {
+    applicationId "com.nhpatt.dremelapp"
+    minSdkVersion 15
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+  }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
 
-//    compile 'com.liferay.mobile:liferay-screens:+'
-//    compile 'com.liferay.mobile:liferay-material-viewset:+'
-    compile project(':liferay-screens')
-    compile project(':liferay-material-viewset')
+//      compile 'com.liferay.mobile:liferay-screens:1.4.1'
+//      compile 'com.liferay.mobile:liferay-material-viewset:1.4.1'
+//  compile project(':liferay-screens')
+//  compile project(':liferay-material-viewset')
 
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
-    testCompile 'junit:junit:4.12'
+  compile 'com.android.support:appcompat-v7:23.4.0'
+  compile 'com.android.support:design:23.4.0'
+  testCompile 'junit:junit:4.12'
+
+  compile 'com.liferay.mobile:liferay-screens:2.0.0-beta.4'
+  compile 'com.liferay.mobile:liferay-material-viewset:2.0.0-beta.4'
 }
 
 repositories {
-    jcenter()
+  maven { url "http://dl.bintray.com/nhpatt/liferay-mobile" }
 }
 
