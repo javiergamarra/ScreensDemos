@@ -2,7 +2,6 @@ package com.nhpatt.workshopexampleapp;
 
 import com.liferay.mobile.screens.push.AbstractPushService;
 import com.liferay.mobile.screens.util.LiferayLogger;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 

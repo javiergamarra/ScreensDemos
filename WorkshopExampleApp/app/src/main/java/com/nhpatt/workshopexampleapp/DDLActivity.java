@@ -3,7 +3,6 @@ package com.nhpatt.workshopexampleapp;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.view.View;
-
 import com.liferay.mobile.android.service.Session;
 import com.liferay.mobile.android.v62.journalarticle.JournalArticleService;
 import com.liferay.mobile.screens.context.SessionContext;
@@ -13,9 +12,8 @@ import com.liferay.mobile.screens.ddl.model.DocumentField;
 import com.liferay.mobile.screens.ddl.model.Record;
 import com.liferay.mobile.screens.push.PushScreensActivity;
 import com.liferay.mobile.screens.util.LiferayLogger;
-
+import java.util.Map;
 import org.json.JSONObject;
-
 
 public class DDLActivity extends PushScreensActivity implements DDLFormListener {
 
@@ -33,14 +31,14 @@ public class DDLActivity extends PushScreensActivity implements DDLFormListener 
 				Session session = SessionContext.createSessionFromCurrentSession();
 				JournalArticleService journalArticleService = new JournalArticleService(session);
 				try {
-					JSONObject jsonObject = journalArticleService.getArticle(getResources().getInteger(R.integer.journal_id));
+					JSONObject jsonObject =
+						journalArticleService.getArticle(getResources().getInteger(R.integer.journal_id));
 					LiferayLogger.e(jsonObject.toString());
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		}).start();
-
 	}
 
 	@Override
@@ -69,7 +67,7 @@ public class DDLActivity extends PushScreensActivity implements DDLFormListener 
 	}
 
 	@Override
-	public void onDDLFormRecordLoaded(Record record) {
+	public void onDDLFormRecordLoaded(Record record, Map<String, Object> valuesAndAttributes) {
 
 	}
 
@@ -84,25 +82,6 @@ public class DDLActivity extends PushScreensActivity implements DDLFormListener 
 
 	}
 
-	@Override
-	public void onDDLFormLoadFailed(Exception e) {
-
-	}
-
-	@Override
-	public void onDDLFormRecordLoadFailed(Exception e) {
-
-	}
-
-	@Override
-	public void onDDLFormRecordAddFailed(Exception e) {
-
-	}
-
-	@Override
-	public void onDDLFormUpdateRecordFailed(Exception e) {
-
-	}
 
 	@Override
 	public void onDDLFormDocumentUploaded(DocumentField documentField, JSONObject jsonObject) {
@@ -115,17 +94,7 @@ public class DDLActivity extends PushScreensActivity implements DDLFormListener 
 	}
 
 	@Override
-	public void loadingFromCache(boolean success) {
-
-	}
-
-	@Override
-	public void retrievingOnline(boolean triedInCache, Exception e) {
-
-	}
-
-	@Override
-	public void storingToCache(Object object) {
+	public void error(Exception e, String userAction) {
 
 	}
 }

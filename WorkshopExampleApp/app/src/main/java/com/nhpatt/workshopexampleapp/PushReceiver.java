@@ -1,7 +1,6 @@
 package com.nhpatt.workshopexampleapp;
 
 import android.support.annotation.NonNull;
-
 import com.liferay.mobile.screens.push.AbstractPushReceiver;
 
 /**

@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">WorkshopExampleApp</string>
-    <string name="title_activity_ddl">DDLActivity</string>
+	<string name="app_name">WorkshopExampleApp</string>
+	<string name="title_activity_ddl">DDLActivity</string>
 </resources>
